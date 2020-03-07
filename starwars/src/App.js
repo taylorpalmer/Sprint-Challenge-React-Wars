@@ -29,7 +29,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">React Wars</h1>
       {characterObject.map(character => {
-        return <CharacterComponent people={characterObject} />;
+        return <CharacterComponent people={character} />;
       })}
     </div>
   );
