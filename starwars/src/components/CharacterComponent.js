@@ -1,27 +1,47 @@
 import React from "react";
 import styled from "styled-components";
 
+const WrapperDiv = styled.div`
+  background-color: white;
+`;
+
+const StyledP = styled.p`
+  color: dodgerblue;
+`;
+
 const CharacterComponent = props => {
   console.log(props);
   return (
-    <div>
-      <h2 className="character-name">{props.character.name}</h2>
-      <p className="character-height">{props.character.height}</p>
-      <p className="character-mass">{props.character.mass}</p>
-      <p className="character-hair_color">{props.character.hair_color}</p>
-      <p className="character-skin_color">{props.character.skin_color}</p>
-      <p className="character-eye_color">{props.character.eye_color}</p>
-      <p className="character-birth_year">{props.character.birth_year}</p>
-      <p className="character-gender">{props.character.gender}</p>
-      <p className="character-homeworld">{props.character.homeworld}</p>
-      <p className="character-films">{props.character.films}</p>
-      <p className="character-species">{props.character.species}</p>
-      <p className="character-vehicles">{props.character.vehicles}</p>
-      <p className="character-starships">{props.character.starships}</p>
-      <p className="character-created">{props.character.created}</p>
-      <p className="character-edited">{props.character.edited}</p>
-      <p className="character-url">{props.character.url}</p>
-    </div>
+    <WrapperDiv>
+      <h2 className="character-name">{props.people.name}</h2>
+      <StyledP className="character-height">{props.people.height}</StyledP>
+      <StyledP className="character-mass">{props.people.mass}</StyledP>
+      <StyledP className="character-hair_color">
+        {props.people.hair_color}
+      </StyledP>
+      <StyledP className="character-skin_color">
+        {props.people.skin_color}
+      </StyledP>
+      <StyledP className="character-eye_color">
+        {props.people.eye_color}
+      </StyledP>
+      <StyledP className="character-birth_year">
+        {props.people.birth_year}
+      </StyledP>
+      <StyledP className="character-gender">{props.people.gender}</StyledP>
+      <StyledP className="character-homeworld">
+        {props.people.homeworld}
+      </StyledP>
+      <StyledP className="character-films">{props.people.films}</StyledP>
+      <StyledP className="character-species">{props.people.species}</StyledP>
+      <StyledP className="character-vehicles">{props.people.vehicles}</StyledP>
+      <StyledP className="character-starships">
+        {props.people.starships}
+      </StyledP>
+      <StyledP className="character-created">{props.people.created}</StyledP>
+      <StyledP className="character-edited">{props.people.edited}</StyledP>
+      <StyledP className="character-url">{props.people.url}</StyledP>
+    </WrapperDiv>
   );
 };
 
