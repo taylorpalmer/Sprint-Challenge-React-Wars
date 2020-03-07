@@ -18,22 +18,21 @@ const App = () => {
       .get("https://swapi.co/api/people")
       .then(response => {
         console.log(response.data);
-        setCharacterObject(response.data);
+        setCharacterObject(response.data.results);
       })
       .catch(err => {
         console.log(err);
       });
   }, []);
 
-  // return (
-  //   <div className="App">
-  //     <h1 className="Header">React Wars</h1>
-  //     {characterObject.map(person => {
-  //       return <CharacterComponent people={people} />;
-  //     })}
-  //   </div>
-  // );
-  return <App />;
+  return (
+    <div className="App">
+      <h1 className="Header">React Wars</h1>
+      {characterObject.map(character => {
+        return <CharacterComponent people={characterObject} />;
+      })}
+    </div>
+  );
 };
 
 export default App;
