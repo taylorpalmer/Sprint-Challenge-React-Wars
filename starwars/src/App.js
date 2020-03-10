@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { data } from "./data";
 import "./App.css";
+import CharacterComponent from "./components/CharacterComponent";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -19,7 +20,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <App />
+      {characterArr.map(character => {
+        return <CharacterComponent people={character} />;
+      })}
     </div>
   );
 };
